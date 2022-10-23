@@ -1,0 +1,20 @@
+interfaz_interna_router: eth2
+ip_privada_router: 10.0.0.1
+mascara_privada: 255.255.255.0
+interfaz_interna_cliente: eth1
+ip_privada_cliente: 10.0.0.2
+interfaz_externa: eth1
+red_privada: 10.0.0.0/24
+
+
+
+
+
+
+
+
+
+
+
+
+

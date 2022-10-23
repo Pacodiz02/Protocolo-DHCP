@@ -1,0 +1,9 @@
+- name: Ensure system is updated
+  apt: update_cache=yes upgrade=yes
+
+- name: clave pub 
+  authorized_key:
+    user: vagrant
+    state: present
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+  become: yes
