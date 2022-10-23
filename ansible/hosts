@@ -2,13 +2,17 @@ all:
   children:
     clientes:
       hosts:
-        cliente: 
-          ansible_ssh_host: 192.168.121.126
-          ansible_ssh_user: vagrant
-          ansible_ssh_private_key_file: ../.vagrant/machines/cliente/libvirt/private_key
+        cliente1:
+          ansible_ssh_host: 192.168.122.201
+          ansible_ssh_user: usuario
+          ansible_ssh_private_key_file: ~/.ssh/id_rsa
+        cliente2:
+          ansible_ssh_host: 192.168.122.202
+          ansible_ssh_user: usuario
+          ansible_ssh_private_key_file: ~/.ssh/id_rsa
     routers:
       hosts:
         router: 
-          ansible_ssh_host: 192.168.121.225
-          ansible_ssh_user: vagrant
-          ansible_ssh_private_key_file: ../.vagrant/machines/router/libvirt/private_key
+          ansible_ssh_host: 192.168.122.200
+          ansible_ssh_user: usuario
+          ansible_ssh_private_key_file: ~/.ssh/id_rsa

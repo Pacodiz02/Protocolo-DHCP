@@ -3,14 +3,19 @@
   roles:
   - role: commons
 
+- hosts: cliente1
+  become: true
+  roles:
+  - role: web
+
 - hosts: routers
   become: true
   roles:
   - role: router
+  - role: dhcp-router
 
 - hosts: clientes     
   become: true
   roles:
-  - role: cliente
-  - role: web
+  - role: dhcp-cliente
 

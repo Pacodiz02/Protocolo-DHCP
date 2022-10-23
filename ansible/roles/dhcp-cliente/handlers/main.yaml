@@ -1,6 +1,5 @@
-- name: reboot
-  reboot:
-- name: restart networking
+- name: restart network
   service:
     name: networking
     state: restarted
+  ignore_errors: yes

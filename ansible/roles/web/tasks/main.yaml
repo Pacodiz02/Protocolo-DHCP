@@ -1,8 +1,8 @@
-- name: "ensure apache2 is installed"
+- name: "Comprobando Apache2"
   apt:
     pkg: apache2
 
-- name: copy template index 
+- name: "Copiando configuración de red"
   template: 
     src: index.j2
     dest: /var/www/html/index.html

@@ -1,9 +1,8 @@
-- name: Ensure system is updated
+- name: "Actualizando la paquetería"
   apt: update_cache=yes upgrade=yes
 
-- name: clave pub 
-  authorized_key:
-    user: vagrant
-    state: present
-    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-  become: yes
+#- name: "Pasando clave pública"
+#  authorized_key: 
+#    user: vagrant
+#    state: present
+#    key: "{{lookup('file', '~/.ssh/id_rsa.pub') }}"

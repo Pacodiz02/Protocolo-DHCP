@@ -1,0 +1,14 @@
+- name: "Comprobando si isc-dhcp-server está instalado"
+  apt:
+    pkg: isc-dhcp-server
+
+- name: "Editando el fichero de configuración dhcpd.conf"
+  template:
+    src: dhcpd.j2
+    dest: /etc/dhcp/dhcpd.conf
+
+- name: "Copiando configuración a /etc/default/isc-dhcp-server"
+  template:
+    src: isc-dhcp-server.j2
+    dest: /etc/default/isc-dhcp-server
+  notify: restart isc-dhcp-server

@@ -1,10 +1,40 @@
-interfaz_interna_router: eth2
+# GENERAL
+mascara_red: 255.255.255.0
+
+#Router
+##Red Externa
+interfaz_externa_router: ens9
+
+##Red NAT
+interfaz_nat_router: ens3
+ip_nat_router: 192.168.122.200
+ip_gateway: 192.168.122.1
+
+##Red Interna
+interfaz_interna_router: ens8
 ip_privada_router: 10.0.0.1
-mascara_privada: 255.255.255.0
-interfaz_interna_cliente: eth1
-ip_privada_cliente: 10.0.0.2
-interfaz_externa: eth1
-red_privada: 10.0.0.0/24
+direccion_privada: 10.0.0.0/24
+
+#Dhcp Clientes
+interfaz_interna_cliente: ens8
+
+#Dhcp Router
+red_privada: 10.0.0.0
+default_lease_time: 600
+max_lease_time: 7200
+inicio_rango: 10.0.0.100
+final_rango: 10.0.0.120
+broadcast_direccion: 10.0.0.255
+dns_primario: 8.8.8.8
+dns_secundario: 4.4.4.4
+
+##Reserva DHCP
+nombre_host: cliente-web
+mac_reserva: 52:54:00:56:66:44
+reserva_cliente: 10.0.0.2
+
+
+
 
 
 
