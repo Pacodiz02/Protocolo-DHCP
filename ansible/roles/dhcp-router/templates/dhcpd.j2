@@ -11,8 +11,8 @@
 #max-lease-time 7200;
 
 subnet {{red_privada}} netmask {{mascara_red}} {
-   {{default_lease_time}};
-   {{max_lease_time}};
+   default-lease-time {{default_lease_time}};
+   max-lease-time {{max_lease_time}};
    range {{inicio_rango}} {{final_rango}};
    option broadcast-address {{broadcast_direccion}};
    option routers {{ip_privada_router}};
