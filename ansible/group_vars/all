@@ -29,8 +29,8 @@ dns_primario: 8.8.8.8
 dns_secundario: 4.4.4.4
 
 ##Reserva DHCP
-nombre_host: cliente-web
-mac_reserva: 52:54:00:56:66:44
+nombre_host: Cliente1-DHCP
+mac_reserva: 52:54:00:a7:f2:1a
 reserva_cliente: 10.0.0.2
 
 
